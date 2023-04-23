@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="screen">
+  <header>
+    <h1 class="title" >Tic Tac Toe</h1>
+  </header>
+  <main>
+    <div class="play">
+      <p>Start</p>
+    </div>
+    <div class="player1">
+        <img class="markt" src="/tic-tac-toe/image/x.png" alt="x">
+        <img class="yourgif" src="/tic-tac-toe/image/lost.png" alt="human">
+        <div class="text">
+          <input type="text" placeholder="Name" id="input">
+        </div>
+    </div>
+
+    <div class="vs">
+      <p>VS</p>
+    </div>
+
+    <div class="player2">
+        <img class="markt" src="/tic-tac-toe/image/o.png" alt="o">
+        <video class="video">
+          <source src="/tic-tac-toe/image/video.mp4" type="video/mp4">
+        </video>
+        <div class="text">
+        <p>Artifical Intelligence</p>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div>
+      <p>Made By </p>
+      <p> Victor Major</p>
+    </div>
+  </footer>
+</div>
+<div class="screen2">
+  <div class="game-board">
+    <div class="div-container">
+      <div class="cell" id="0"></div>
+      <div class="cell" id="1"></div>
+      <div class="cell" id="2"></div>
+      <div class="cell" id="3"></div>
+      <div class="cell" id="4"></div>
+      <div class="cell" id="5"></div>
+      <div class="cell" id="6"></div>
+      <div class="cell" id="7"></div>
+      <div class="cell" id="8"></div>
+  
+    </div>
+  </div>
+  
+    
+    <div class="endgame">
+      <div class="text"></div>
+    </div>
+    <button onclick="startGame()" class="return">Return</button>
+  </div>
+</div>
+
+  <script src="game.js"></script>
+</body>
+</html>

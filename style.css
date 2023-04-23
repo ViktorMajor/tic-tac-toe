@@ -1,0 +1,230 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Source Code Pro', sans-serif;
+  font-size: 30px;
+  height: 1000px;
+  color: white;
+  overflow: hidden;
+}
+
+.screen {
+  background: rgb(172, 138, 119);
+  display: grid;
+  grid-template-rows: repeat(7, 1fr);
+  height: 100vh;
+}
+
+
+
+.screen header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-row: 1/2;
+  font-size: 40px;
+}
+.title {
+  margin: 10px;
+}
+.game-board {
+  position: relative;
+  top: -214vh;
+  transition: top 3s ease;
+
+}
+.title, .play, .vs, 
+footer, .screen, #name, .ai {
+  position: relative;
+  top: 0;
+  left: 0;
+  transition: top 3s ease;
+  text-align: center;
+  
+}
+.player1, .player2 {
+  position: relative;
+  top: 0;
+  left: 0;
+  transition: left 2s ease;
+}
+
+
+.screen header .title:hover {
+  color:rgba(0, 188, 250, 0.606)}
+
+.screen main {
+  display: flex;
+  justify-content: center;
+  grid-row: 2/7;
+  font-size: 100px;
+}
+
+.screen div {
+  display: flex;
+  justify-content: center;
+}
+
+.screen .vs p {
+  margin: auto;
+}
+
+.screen .play {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 90px;
+  padding: 10px;
+  height: 100px;
+  border-radius: 70px;
+  display: none;
+  animation: color 4s infinite;
+}
+@keyframes color {
+  50% {
+    color:rgba(0, 188, 250, 0.606)  }
+}
+
+
+
+.screen .player1, .screen .player2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 9%;
+  width: 25%;
+  border-radius: 20px;
+  border: 1px solid black;
+  background: rgb(255, 255, 255);
+  animation: box-shadow 4s infinite;
+}
+
+@keyframes box-shadow {
+  50% {
+    box-shadow: -10px 10px 40px rgba(0, 188, 250, 0.606);
+  }
+}
+
+.screen .markt {
+  width: 50px;
+  height: 50px;
+  margin: 30px auto 0 auto;
+}
+
+.screen video, .screen .yourgif {
+  width: 100%;
+  height: 60%;
+  border-radius: 5px;
+}
+
+
+.screen .text {
+  align-items: center;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.screen input,
+.screen .text p {
+  margin: 0 70px;
+  font-size: 30px;
+  color: rgb(172, 138, 119);
+  background: none;
+  border: none;
+  text-align: center;
+}
+.screen .player1 .text p {
+  color:rgba(0, 188, 250, 0.606)}
+
+.screen input {
+  width: 80%;
+  text-align: center;
+}
+
+.screen footer {
+  display: flex;
+  height: auto;
+  grid-row: 7/8;
+}
+
+.screen footer div {
+  display: flex;
+  margin: auto;
+}
+
+.screen footer p {
+  margin: 15px;
+}
+/* the second screen element */
+
+.game-board {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.game-board p {
+  margin: 5px;
+}
+.ai, #name {
+  width: 700px;
+}
+@media screen and (max-width: 1050px) {
+  .game-board .div-container {
+    width: 80vw;
+    height: 80vw;
+  }
+}
+
+.game-board .div-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  margin: auto;
+  width: 40vw;
+  max-width: 540px;
+  height: 40vw;
+  max-height: 540px;
+}
+@media screen and (max-width: 1050px) {
+  .game-board .div-container {
+    width: 100vw;
+    height: 100vw;
+  }
+}
+.game-board .div-container div {
+background: rgb(225, 225, 225);
+width: 90%;
+height: 90%;
+border-radius: 15%;
+border: 1px solid black;
+}
+.game-board .div-container div:hover, .return:hover {
+  background-color: rgba(0, 188, 250, 0.606)
+}
+.return {
+  background:rgba(0, 188, 250, 0.606);
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 15px;
+}
+
+.cell {
+  color: rgb(172, 138, 119);
+  display: flex;
+  font-size: 110px;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
